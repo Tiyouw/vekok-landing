@@ -72,7 +72,12 @@ npm run serve    # http://localhost:4173
 
 ## Catatan
 
-- Nomor WhatsApp di CTA masih `wa.me/?text=...` (generic share) — isi nomor
-  CakNdut di `#lokasi` dan tombol "GAS KE SABTUAN" sebelum publikasi final.
-- Domain canonical/OG memakai `https://vekok.vercel.app/`; ganti kalau pakai
-  domain sendiri.
+- Nomor WhatsApp: tombol "CHAT CAKNDUT" + ikon WA footer → `wa.me/6282132341102` (prefill pesan).
+- Maps: CTA "LIHAT LOKASI DI MAPS" → short link GBP `maps.app.goo.gl/u8kqErAmz45PEDtc9`
+  (listing "Vespa Klotok - Kopi CakNdut (VEKOK)", Jl. Basuki Rahmat, Tegal Besar
+  Wetan, Pasar Sabtuan, Kab. Jember 68131 — nomor & alamat juga masuk JSON-LD).
+- Domain produksi: `https://vekok.tiyoouw.app` (custom domain Vercel);
+  `https://vekok-landing.vercel.app` tetap aktif sebagai alias. Canonical, OG,
+  sitemap, dan JSON-LD memakai domain utama.
+- IG/TikTok footer masih link kosong `instagram.com`/`tiktok.com` → kirim
+  username kalau mau diisi.
