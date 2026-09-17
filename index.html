@@ -8,16 +8,18 @@
 <meta content="VEKOK CakNdut" name="author"/>
 <meta content="#D49B45" name="theme-color"/>
 <meta content="index, follow" name="robots"/>
-<link href="https://vekok.vercel.app/" rel="canonical"/>
+<link href="https://vekok-landing.vercel.app/" rel="canonical"/>
 <meta content="website" property="og:type"/>
 <meta content="VEKOK — Vespa Klotok Sabtuan Jember (CakNdut)" property="og:title"/>
 <meta content="Kopi tubruk &amp; klotok jalanan khas Jember racikan langsung CakNdut. Buka tiap hari, serba Rp5.000." property="og:description"/>
-<meta content="https://vekok.vercel.app/assets/og-image.png" property="og:image"/>
+<meta content="https://vekok-landing.vercel.app/assets/og-image.png" property="og:image"/>
+<meta content="https://vekok-landing.vercel.app/" property="og:url"/>
+<meta content="VEKOK" property="og:site_name"/>
 <meta content="id_ID" property="og:locale"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="VEKOK — Vespa Klotok Sabtuan Jember" name="twitter:title"/>
 <meta content="Kopi klotok pinggir Pasar Sabtuan, serba Rp5.000." name="twitter:description"/>
-<meta content="https://vekok.vercel.app/assets/og-image.png" name="twitter:image"/>
+<meta content="https://vekok-landing.vercel.app/assets/og-image.png" name="twitter:image"/>
 <link href="/assets/logo.png" rel="icon" type="image/png"/>
 <link href="/assets/logo.png" rel="apple-touch-icon"/>
 
@@ -28,6 +30,7 @@
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;0,700;0,800;1,700&amp;family=Space+Grotesk:wght@500;700;900&amp;family=Syne:wght@700;800;900&amp;display=swap" rel="stylesheet"/>
 <link href="/dist/style.css" rel="stylesheet"/>
+<script>document.documentElement.classList.add('js')</script>
 </head>
 <body class="bg-black text-black font-sans antialiased selection:bg-amberkraft selection:text-black relative overflow-x-hidden min-h-screen">
 <!-- STICKY TOP NAVIGATION BAR -->
@@ -908,25 +911,34 @@
 </footer>
 <!-- SCRIPT: INTERSECTION OBSERVER FOR SCROLL REVEALS & PARALLAX TRANSFORMS -->
 <script>
+    /* Progressive enhancement: the .js root class is what arms the hidden
+       pre-animation state in CSS, so without JS every section stays visible. */
     document.addEventListener('DOMContentLoaded', () => {
-      // 1. Intersection Observer for Scroll Reveals
       const revealElements = document.querySelectorAll('.reveal-on-scroll, .stamp-badge');
-      const observer = new IntersectionObserver((entries, obs) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-          }
+      const showAll = () => revealElements.forEach(el => el.classList.add('is-visible'));
+
+      if (!('IntersectionObserver' in window)) { showAll(); }
+      else {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('is-visible'); });
+        }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+        revealElements.forEach(el => observer.observe(el));
+        /* Anything already above the fold at load must not wait for a scroll. */
+        window.addEventListener('load', () => {
+          revealElements.forEach(el => {
+            if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add('is-visible');
+          });
         });
-      }, {
-        threshold: 0.12,
-        rootMargin: "0px 0px -40px 0px"
-      });
+      }
 
-      revealElements.forEach(el => observer.observe(el));
+      /* Keep the reveal-only content reachable when animation is unwanted. */
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) showAll();
 
-      // 2. Parallax Scroll Handler for background elements and sticker motifs
+      /* Print / PDF export must never inherit the pre-animation state. */
+      window.addEventListener('beforeprint', showAll);
+
       const parallaxElements = document.querySelectorAll('.parallax-elem');
-      
+      if (!parallaxElements.length || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
       let ticking = false;
       window.addEventListener('scroll', () => {
         if (!ticking) {
@@ -934,8 +946,7 @@
             const scrollY = window.pageYOffset;
             parallaxElements.forEach(el => {
               const speed = parseFloat(el.getAttribute('data-speed') || 0.1);
-              const yOffset = -(scrollY * speed);
-              el.style.transform = `translate3d(0, ${yOffset}px, 0)`;
+              el.style.transform = `translate3d(0, ${-(scrollY * speed)}px, 0)`;
             });
             ticking = false;
           });
@@ -946,6 +957,6 @@
   </script>
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"CafeOrCoffeeShop","name":"VEKOK (Vespa Klotok CakNdut)","alternateName":"Warkop Sabtuan CakNdut","description":"Warkop Vespa Klotok Sabtuan racikan CakNdut. Kopi tubruk, robusta, arabica, liberica, isi ulang tumbler serba Rp5.000.","image":"https://vekok.vercel.app/assets/og-image.png","servesCuisine":["Kopi","Teh","Camilan Tradisional"],"priceRange":"Rp5.000","currenciesAccepted":"IDR","address":{"@type":"PostalAddress","streetAddress":"Pasar Sabtuan","addressLocality":"Jember","addressRegion":"Jawa Timur","addressCountry":"ID"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"06:00","closes":"12:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"16:00","closes":"20:00"}],"hasMenu":{"@type":"Menu","name":"Daftar Ma'min Vekok","hasMenuSection":[{"@type":"MenuSection","name":"Kopi"},{"@type":"MenuSection","name":"Teh"},{"@type":"MenuSection","name":"Godogan & Snack"}]}}
+{"@context":"https://schema.org","@type":"CafeOrCoffeeShop","name":"VEKOK (Vespa Klotok CakNdut)","alternateName":"Warkop Sabtuan CakNdut","description":"Warkop Vespa Klotok Sabtuan racikan CakNdut. Kopi tubruk, robusta, arabica, liberica, isi ulang tumbler serba Rp5.000.","image":"https://vekok-landing.vercel.app/assets/og-image.png","servesCuisine":["Kopi","Teh","Camilan Tradisional"],"priceRange":"Rp5.000","currenciesAccepted":"IDR","address":{"@type":"PostalAddress","streetAddress":"Pasar Sabtuan","addressLocality":"Jember","addressRegion":"Jawa Timur","addressCountry":"ID"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"06:00","closes":"12:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"16:00","closes":"20:00"}],"hasMenu":{"@type":"Menu","name":"Daftar Ma'min Vekok","hasMenuSection":[{"@type":"MenuSection","name":"Kopi"},{"@type":"MenuSection","name":"Teh"},{"@type":"MenuSection","name":"Godogan & Snack"}]}}
 </script>
 </body></html>
