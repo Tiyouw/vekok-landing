@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------------------------------------------------------------
+   VEKOK custom layer — handmade indie warkop / zine brutalism.
+   Kept in @layer components so Tailwind utilities still win
+   (same cascade order the Stitch CDN build produced).
+   --------------------------------------------------------------- */
+@layer components {
+      /* Halftone & Noise dot pattern for handmade indie warkop zine feel */
+      .bg-halftone {
+        background-image: radial-gradient(#000000 1.2px, transparent 1.2px);
+        background-size: 16px 16px;
+      }
+      .bg-halftone-white {
+        background-image: radial-gradient(#ffffff 1.2px, transparent 1.2px);
+        background-size: 16px 16px;
+      }
+      .brutal-border {
+        border: 3px solid #000000;
+        box-shadow: 6px 6px 0px #000000;
+      }
+      .brutal-border-kraft {
+        border: 3px solid #000000;
+        box-shadow: 6px 6px 0px #D49B45;
+      }
+      .brutal-border-white {
+        border: 3px solid #ffffff;
+        box-shadow: 6px 6px 0px #ffffff;
+      }
+      .brutal-btn {
+        transition: all 0.15s cubic-bezier(0.2, 0.8, 0.2, 1);
+      }
+      .brutal-btn:hover {
+        transform: translate(-3px, -3px);
+        box-shadow: 9px 9px 0px #000000;
+      }
+      .brutal-btn:active {
+        transform: translate(3px, 3px);
+        box-shadow: 2px 2px 0px #000000;
+      }
+      /* Smooth reveal transitions on scroll */
+      .parallax-item {
+        will-change: transform, opacity;
+        transition: transform 0.1s ease-out;
+      }
+      .reveal-on-scroll {
+        opacity: 0;
+        transform: translateY(35px);
+        transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .reveal-on-scroll.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      /* Sticker stamp pop effect */
+      .stamp-badge {
+        opacity: 0;
+        transform: scale(0.65) rotate(-15deg);
+        transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+      }
+      .stamp-badge.is-visible {
+        opacity: 1;
+        transform: scale(1) rotate(var(--rot, -3deg));
+      }
+}

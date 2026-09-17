@@ -1,0 +1,17 @@
+{
+  "name": "vekok-landing",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Landing page VEKOK — Vespa Klotok Sabtuan Jember (CakNdut). Static site, Tailwind CSS v3, zero runtime framework.",
+  "scripts": {
+    "dev": "tailwindcss -i ./src/input.css -o ./dist/style.css --watch",
+    "build": "tailwindcss -i ./src/input.css -o ./dist/style.css --minify",
+    "serve": "python3 -m http.server 4173"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
