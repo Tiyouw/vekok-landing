@@ -81,3 +81,43 @@
         }
       }
 }
+
+/* ---------------------------------------------------------------
+   UNLAYERED on purpose: unlayered rules beat every @layer
+   (including Tailwind's `.transition-all` utility on cards), so
+   the reveal transitions below are guaranteed to run at full
+   duration even on elements that also hover-transition.
+   --------------------------------------------------------------- */
+:root { --ease-pop: cubic-bezier(0.22, 1, 0.36, 1); }
+
+.js .reveal-pop {
+  opacity: 0;
+  transform: translateY(26px) scale(0.94);
+  transition: opacity 0.55s var(--ease-pop), transform 0.55s var(--ease-pop);
+}
+.reveal-pop.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Hero load-time entrance (not scroll-based). */
+@keyframes vekok-rise {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+/* fill-mode backwards: hidden before delay, but after the animation the
+   element returns to normal CSS so hover:rotate-6 keeps working. */
+.js .hero-rise-2 { animation: vekok-rise 0.7s var(--ease-pop) 0.20s backwards; }
+.js .hero-rise-3 { animation: vekok-rise 0.7s var(--ease-pop) 0.38s backwards; }
+.js .hero-rise-4 { animation: vekok-rise 0.7s var(--ease-pop) 0.55s backwards; }
+
+@media (prefers-reduced-motion: reduce) {
+  .js .reveal-pop {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .js .hero-rise-2,
+  .js .hero-rise-3,
+  .js .hero-rise-4 { animation: none !important; }
+}
