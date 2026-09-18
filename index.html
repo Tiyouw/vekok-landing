@@ -20,17 +20,25 @@
 <meta content="VEKOK — Vespa Klotok Sabtuan Jember" name="twitter:title"/>
 <meta content="Kopi klotok pinggir Pasar Sabtuan, serba Rp5.000." name="twitter:description"/>
 <meta content="https://vekok.tiyoouw.app/assets/og-image.png" name="twitter:image"/>
+<link href="/favicon.ico" rel="icon" sizes="any"/>
+<link href="/assets/icon-192.png" rel="icon" sizes="192x192" type="image/png"/>
+<link href="/assets/icon-512.png" rel="icon" sizes="512x512" type="image/png"/>
+<link href="/assets/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/manifest.webmanifest" rel="manifest"/>
+<meta content="yes" name="mobile-web-app-capable"/>
+<meta content="yes" name="apple-mobile-web-app-capable"/>
+<meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/>
+<meta content="VEKOK" name="apple-mobile-web-app-title"/>
 <link href="/assets/logo.png" rel="icon" type="image/png"/>
 <link href="/assets/logo.png" rel="apple-touch-icon"/>
 
 <title>VEKOK — Vespa Klotok Sabtuan Jember (CakNdut)</title>
 <!-- Tailwind CSS -->
 <!-- Google Fonts: Syne & Plus Jakarta Sans & Space Grotesk -->
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;0,700;0,800;1,700&amp;family=Space+Grotesk:wght@500;700;900&amp;family=Syne:wght@700;800;900&amp;display=swap" rel="stylesheet"/>
 <link href="/dist/style.css" rel="stylesheet"/>
 <script>document.documentElement.classList.add('js')</script>
+<link as="font" crossorigin="" href="/assets/fonts/syne-latin.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="/assets/fonts/plus-jakarta-sans-latin.woff2" rel="preload" type="font/woff2"/>
 </head>
 <body class="bg-black text-black font-sans antialiased selection:bg-amberkraft selection:text-black relative overflow-x-hidden min-h-screen">
 <!-- STICKY TOP NAVIGATION BAR -->
@@ -38,7 +46,7 @@
 <header class="sticky top-0 z-50 backdrop-blur-md bg-white/90 border-b-2 border-black transition-all">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-2 sm:gap-4">
 <!-- Left: Vekok Wordmark / Logo Badge -->
-<a aria-label="Vekok — kembali ke beranda" class="bg-white border-2 border-black px-3 py-1.5 font-display font-black text-lg sm:text-xl tracking-tighter flex items-center gap-2 shadow-[3px_3px_0px_#000] hover:shadow-[4px_4px_0px_#D49B45] hover:-translate-y-0.5 transition-all shrink-0" href="#hero">
+<a aria-label="Vekok — kembali ke beranda" class="bg-white border-2 border-black px-2.5 sm:px-3 py-1.5 font-display font-black text-base sm:text-xl tracking-tighter flex items-center gap-1.5 sm:gap-2 shadow-[3px_3px_0px_#000] hover:shadow-[4px_4px_0px_#D49B45] hover:-translate-y-0.5 transition-all shrink-0" href="#hero">
 <img alt="Vekok Logo" class="w-6 h-6 object-contain" decoding="async" src="/assets/logo.png"/>
 <span>VEKOK</span>
 <span class="hidden md:inline-block font-mono text-[10px] bg-black text-white px-1.5 py-0.5 font-bold tracking-normal uppercase">CakNdut</span>
@@ -60,14 +68,18 @@
 <a class="px-2.5 py-1.5 text-black hover:bg-black hover:text-white border border-transparent hover:border-black transition-all" href="#lokasi">
         Lokasi
       </a>
+<a class="px-2.5 py-1.5 text-black hover:bg-black hover:text-white border border-transparent hover:border-black transition-all" href="#faq">
+        FAQ
+      </a>
 </nav>
 <!-- Right Action Elements -->
 <div class="flex items-center gap-2 sm:gap-3">
-<span class="hidden xl:inline-flex items-center gap-1.5 bg-black text-white border-2 border-black px-2.5 py-1 font-mono text-[11px] font-bold uppercase tracking-wider">
-<span class="w-2 h-2 rounded-full bg-amberkraft animate-ping"></span> Pasar Sabtuan
+<span class="vekok-pill hidden xl:inline-flex bg-black text-white border-2 border-black px-2.5 py-1 text-[11px]" data-vekok-status>
+<span class="vekok-dot"></span>
+<span data-vekok-status-text>BUKA TIAP HARI &middot; 2 SESI</span>
       </span>
 <!-- CTA action badge button -->
-<a class="brutal-btn bg-amberkraft text-black border-2 border-black px-3 sm:px-4 py-1.5 font-mono text-xs font-black uppercase tracking-wider shadow-[3px_3px_0px_#000] hover:bg-black hover:text-amberkraft flex items-center gap-1.5 shrink-0" href="#lokasi">
+<a class="brutal-btn bg-amberkraft text-black border-2 border-black px-2.5 sm:px-4 py-1.5 font-mono text-[10px] sm:text-xs font-black uppercase tracking-wide sm:tracking-wider shadow-[3px_3px_0px_#000] hover:bg-black hover:text-amberkraft flex items-center gap-1.5 shrink-0" href="#lokasi">
 <span>GAS KE SABTUAN</span>
 <svg class="w-3.5 h-3.5 stroke-current stroke-2" fill="none" viewbox="0 0 24 24">
 <circle cx="6" cy="18" r="3"></circle>
@@ -83,7 +95,7 @@
 <a class="px-2 py-0.5 text-black hover:text-amberkraft-dark whitespace-nowrap" href="#jam-operasional">Jam Buka</a>
 <a class="px-2 py-0.5 text-black hover:text-amberkraft-dark whitespace-nowrap" href="#menu">Ma'min</a>
 <a class="px-2 py-0.5 text-black hover:text-amberkraft-dark whitespace-nowrap" href="#tumbler">Isi Ulang</a>
-<a class="px-2 py-0.5 text-black hover:text-amberkraft-dark whitespace-nowrap" href="#lokasi">Lokasi</a>
+<a class="px-2 py-0.5 text-black hover:text-amberkraft-dark whitespace-nowrap" href="#lokasi">Lokasi</a><a class="px-2 py-0.5 text-black hover:text-amberkraft-dark whitespace-nowrap" href="#faq">FAQ</a>
 </div>
 </header>
 <!-- 1. HERO SECTION -->
@@ -130,6 +142,12 @@
             VEKOK
           </h1>
 </div>
+</div>
+<div class="mt-6 flex justify-center">
+<span class="vekok-pill inline-flex border-2 border-black bg-white text-black font-mono text-xs font-black px-3.5 py-2 shadow-[3px_3px_0px_#000]" data-vekok-status>
+<span class="vekok-dot"></span>
+<span id="vekok-hero-status" data-vekok-status-text>BUKA TIAP HARI &middot; 06.00&ndash;12.00 &amp; 16.00&ndash;20.00 WIB</span>
+</span>
 </div>
 <!-- Tagline & Indonesian street warkop heritage -->
 <div class="hero-rise-4 mt-6 max-w-2xl">
@@ -278,6 +296,12 @@
           Buka dua sesi setiap hari di Pasar Sabtuan dipandu langsung oleh CakNdut. Pagi buat penyegar, sore buat obrolan santai.
         </p>
 </div>
+<div class="reveal-on-scroll flex justify-center mb-10">
+<span class="vekok-pill inline-flex border-[3px] border-black bg-amberkraft text-black font-mono text-sm font-black px-5 py-3 shadow-[5px_5px_0px_#000]" data-vekok-status>
+<span class="vekok-dot"></span>
+<span data-vekok-status-text>BUKA TIAP HARI &middot; 2 SESI</span>
+</span>
+</div>
 <!-- Two Bold Badge/Sticker Cards -->
 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
 <!-- Sesi Pagi -->
@@ -393,7 +417,7 @@
 <div class="flex items-center justify-between border-b-[3px] border-black pb-4 mb-6">
 <div class="flex items-center gap-3">
 <span class="w-8 h-8 bg-black text-white rounded-full flex items-center justify-center font-mono font-bold text-sm">01</span>
-<h3 class="font-display font-black text-3xl sm:text-4xl uppercase tracking-tight">KOPI</h3>
+<h3 class="font-display font-black text-xl sm:text-4xl uppercase tracking-tight break-words min-w-0">KOPI</h3>
 </div>
 <span class="font-mono text-xs font-bold bg-amberkraft text-black px-2.5 py-1 uppercase border border-black">Seduhan Klotok CakNdut</span>
 </div>
@@ -461,7 +485,7 @@
 <div class="flex items-center justify-between border-b-[3px] border-black pb-4 mb-6">
 <div class="flex items-center gap-3">
 <span class="w-8 h-8 bg-black text-white rounded-full flex items-center justify-center font-mono font-bold text-sm">02</span>
-<h3 class="font-display font-black text-3xl sm:text-4xl uppercase tracking-tight">TEH</h3>
+<h3 class="font-display font-black text-xl sm:text-4xl uppercase tracking-tight break-words min-w-0">TEH</h3>
 </div>
 <span class="font-mono text-xs font-bold bg-amberkraft text-black px-2.5 py-1 uppercase border border-black">Segar &amp; Hangat</span>
 </div>
@@ -525,12 +549,12 @@
 <div class="flex flex-col sm:flex-row sm:items-center justify-between border-b-[3px] border-black pb-4 mb-6 gap-2">
 <div class="flex items-center gap-3">
 <span class="w-8 h-8 bg-black text-white rounded-full flex items-center justify-center font-mono font-bold text-sm">03</span>
-<h3 class="font-display font-black text-3xl sm:text-4xl uppercase tracking-tight">GODOGAN &amp; SNACK</h3>
+<h3 class="font-display font-black text-xl sm:text-4xl uppercase tracking-tight break-words min-w-0">GODOGAN &amp; SNACK</h3>
 </div>
 <span class="font-mono text-xs font-bold bg-amberkraft text-black px-2.5 py-1 uppercase self-start sm:self-auto border border-black">Camilan Tradisional Serba 5K</span>
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-<div class="reveal-pop border-2 border-black p-4 hover:bg-black hover:text-white transition-all brutal-btn flex flex-col justify-between group">
+<div class="reveal-pop border-2 border-black p-4 hover:bg-black hover:text-white transition-all brutal-btn flex flex-col justify-between group" data-vekok-card="snack">
 <div>
 <span class="font-mono text-[10px] font-bold text-black/60 group-hover:text-white/70 block uppercase">Specialty Sabtuan</span>
 <h4 class="font-display font-black text-xl tracking-tight mt-1">Pisang Plenyet</h4>
@@ -541,7 +565,7 @@
 <span class="bg-black text-white group-hover:bg-amberkraft group-hover:text-black px-2 py-0.5 text-xs">5K</span>
 </div>
 </div>
-<div class="reveal-pop border-2 border-black p-4 hover:bg-black hover:text-white transition-all brutal-btn flex flex-col justify-between group">
+<div class="reveal-pop border-2 border-black p-4 hover:bg-black hover:text-white transition-all brutal-btn flex flex-col justify-between group" data-vekok-card="snack">
 <div>
 <span class="font-mono text-[10px] font-bold text-black/60 group-hover:text-white/70 block uppercase">Rebusan Hangat</span>
 <h4 class="font-display font-black text-xl tracking-tight mt-1">Pisang Godog</h4>
@@ -552,7 +576,7 @@
 <span class="bg-black text-white group-hover:bg-amberkraft group-hover:text-black px-2 py-0.5 text-xs">5K</span>
 </div>
 </div>
-<div class="reveal-pop border-2 border-black p-4 hover:bg-black hover:text-white transition-all brutal-btn flex flex-col justify-between group">
+<div class="reveal-pop border-2 border-black p-4 hover:bg-black hover:text-white transition-all brutal-btn flex flex-col justify-between group" data-vekok-card="snack">
 <div>
 <span class="font-mono text-[10px] font-bold text-black/60 group-hover:text-white/70 block uppercase">Pala Pendem</span>
 <h4 class="font-display font-black text-xl tracking-tight mt-1">Telo Godog</h4>
@@ -563,7 +587,7 @@
 <span class="bg-black text-white group-hover:bg-amberkraft group-hover:text-black px-2 py-0.5 text-xs">5K</span>
 </div>
 </div>
-<div class="reveal-pop border-2 border-black p-4 hover:bg-black hover:text-white transition-all brutal-btn flex flex-col justify-between group">
+<div class="reveal-pop border-2 border-black p-4 hover:bg-black hover:text-white transition-all brutal-btn flex flex-col justify-between group" data-vekok-card="snack">
 <div>
 <span class="font-mono text-[10px] font-bold text-black/60 group-hover:text-white/70 block uppercase">Pala Pendem</span>
 <h4 class="font-display font-black text-xl tracking-tight mt-1">Pohong Godog</h4>
@@ -574,7 +598,7 @@
 <span class="bg-black text-white group-hover:bg-amberkraft group-hover:text-black px-2 py-0.5 text-xs">5K</span>
 </div>
 </div>
-<div class="reveal-pop border-2 border-black p-4 hover:bg-black hover:text-white transition-all brutal-btn flex flex-col justify-between group">
+<div class="reveal-pop border-2 border-black p-4 hover:bg-black hover:text-white transition-all brutal-btn flex flex-col justify-between group" data-vekok-card="snack">
 <div>
 <span class="font-mono text-[10px] font-bold text-black/60 group-hover:text-white/70 block uppercase">Pala Pendem</span>
 <h4 class="font-display font-black text-xl tracking-tight mt-1">Tales Godog</h4>
@@ -585,7 +609,7 @@
 <span class="bg-black text-white group-hover:bg-amberkraft group-hover:text-black px-2 py-0.5 text-xs">5K</span>
 </div>
 </div>
-<div class="reveal-pop border-2 border-black p-4 hover:bg-black hover:text-white transition-all brutal-btn flex flex-col justify-between group">
+<div class="reveal-pop border-2 border-black p-4 hover:bg-black hover:text-white transition-all brutal-btn flex flex-col justify-between group" data-vekok-card="snack">
 <div>
 <span class="font-mono text-[10px] font-bold text-black/60 group-hover:text-white/70 block uppercase">Panggangan</span>
 <h4 class="font-display font-black text-xl tracking-tight mt-1">Roti Bakar</h4>
@@ -596,7 +620,7 @@
 <span class="bg-black text-white group-hover:bg-amberkraft group-hover:text-black px-2 py-0.5 text-xs">5K</span>
 </div>
 </div>
-<div class="reveal-pop border-2 border-black p-4 hover:bg-black hover:text-white transition-all brutal-btn flex flex-col justify-between group">
+<div class="reveal-pop border-2 border-black p-4 hover:bg-black hover:text-white transition-all brutal-btn flex flex-col justify-between group" data-vekok-card="snack">
 <div>
 <span class="font-mono text-[10px] font-bold text-black/60 group-hover:text-white/70 block uppercase">Gurih Pedas</span>
 <h4 class="font-display font-black text-xl tracking-tight mt-1">Tahu Saus Tiram</h4>
@@ -607,7 +631,7 @@
 <span class="bg-black text-white group-hover:bg-amberkraft group-hover:text-black px-2 py-0.5 text-xs">5K</span>
 </div>
 </div>
-<div class="reveal-pop border-2 border-black p-4 hover:bg-black hover:text-white transition-all brutal-btn flex flex-col justify-between group">
+<div class="reveal-pop border-2 border-black p-4 hover:bg-black hover:text-white transition-all brutal-btn flex flex-col justify-between group" data-vekok-card="snack">
 <div>
 <span class="font-mono text-[10px] font-bold text-black/60 group-hover:text-white/70 block uppercase">Kenyang Mantap</span>
 <h4 class="font-display font-black text-xl tracking-tight mt-1">Mie Telur Godog</h4>
@@ -790,6 +814,10 @@
 </div>
 <!-- Direct CTA Button -->
 <div class="mt-8 flex flex-wrap gap-4">
+<a class="brutal-btn bg-amberkraft text-black font-display font-black text-base px-6 py-3.5 border-[3px] border-black shadow-[6px_6px_0px_#000] flex items-center gap-2.5 hover:bg-black hover:text-amberkraft" data-vekok-route href="#" rel="noopener noreferrer" target="_blank">
+<span>RUTE KE VEKOK</span>
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+</a>
 <a class="brutal-btn bg-black text-white font-display font-black text-base px-8 py-3.5 border-[3px] border-black shadow-[6px_6px_0px_#D49B45] flex items-center gap-2.5 hover:bg-amberkraft hover:text-black" href="https://maps.app.goo.gl/u8kqErAmz45PEDtc9" rel="noopener noreferrer" target="_blank">
 <span>LIHAT LOKASI DI MAPS</span>
 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
@@ -803,6 +831,10 @@
 <path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
 </svg>
 </a>
+<button class="brutal-btn bg-white text-black font-display font-black text-base px-6 py-3.5 border-[3px] border-black shadow-[6px_6px_0px_#D49B45] flex items-center gap-2.5 hover:bg-amberkraft-light" data-vekok-share type="button">
+<span>BAGIKAN</span>
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M8.684 13.342A3 3 0 1010 12a3 3 0 00-1.316 1.342m0 0l5.632 3.316m0 0A3 3 0 1120 18a3 3 0 01-5.684-1.342m0 0l-5.632-3.316M10 12a3 3 0 11-1.316-1.342" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+</button>
 </div>
 </div>
 <!-- Right: Stylized Minimalist Map Card -->
@@ -826,10 +858,106 @@
 <span class="w-2 h-2 rounded-full bg-amberkraft"></span>
                 TITIK KOORDINAT: PASAR SABTUAN
               </span>
-<span class="bg-amberkraft text-black px-2 py-0.5 font-black uppercase border border-black">BUKA HARI INI</span>
+<span class="bg-amberkraft text-black px-2 py-0.5 font-black uppercase border border-black" data-vekok-status="short" title="BUKA HARI INI"><span data-vekok-status-text>BUKA TIAP HARI</span></span>
 </div>
 </div>
 </div>
+</div>
+</div>
+</section>
+
+<!-- 8. FAQ -->
+<section class="scroll-mt-20 relative bg-amberkraft-light border-t-4 border-black py-20 sm:py-28" id="faq">
+<div class="absolute inset-0 bg-halftone opacity-10 pointer-events-none"></div>
+<div class="max-w-4xl mx-auto px-4 sm:px-6 relative z-10">
+<div class="reveal-on-scroll text-center max-w-xl mx-auto mb-12">
+<div class="inline-block bg-black text-white px-3 py-1 font-mono text-xs font-bold uppercase tracking-wider mb-2">
+          Tanya Jawab
+        </div>
+<h2 class="font-display font-black text-3xl sm:text-6xl tracking-tight text-black uppercase break-words hyphens-auto">
+          SERING DITANYAKAN
+        </h2>
+<p class="font-mono text-sm sm:text-base font-semibold text-black/70 mt-2">
+          Hal-hal yang paling sering ditanya soal VEKOK, Pasar Sabtuan, dan cara pesan.
+        </p>
+</div>
+<div class="space-y-4">
+
+<details class="reveal-on-scroll group border-[3px] border-black bg-white shadow-[6px_6px_0px_#000] open:shadow-[6px_6px_0px_#D49B45]">
+<summary class="flex items-center justify-between gap-4 cursor-pointer list-none p-5 font-display font-black text-lg sm:text-xl tracking-tight">
+<span>Vekok buka jam berapa?</span>
+<span aria-hidden="true" class="shrink-0 w-7 h-7 border-2 border-black bg-amberkraft flex items-center justify-center font-mono font-black text-base leading-none group-open:hidden">+</span>
+<span aria-hidden="true" class="shrink-0 w-7 h-7 border-2 border-black bg-black text-amberkraft hidden items-center justify-center font-mono font-black text-base leading-none group-open:flex">&minus;</span>
+</summary>
+<p class="px-5 pb-5 font-sans text-sm sm:text-base text-black/80 leading-relaxed">VEKOK buka setiap hari tanpa libur dalam dua sesi: pagi 06.00-12.00 WIB dan sore 16.00-20.00 WIB. Sesi pagi cocok buat sarapan dan booster, sesi sore buat cangkruk santai.</p>
+</details>
+<details class="reveal-on-scroll group border-[3px] border-black bg-white shadow-[6px_6px_0px_#000] open:shadow-[6px_6px_0px_#D49B45]">
+<summary class="flex items-center justify-between gap-4 cursor-pointer list-none p-5 font-display font-black text-lg sm:text-xl tracking-tight">
+<span>Di mana lokasi Vekok?</span>
+<span aria-hidden="true" class="shrink-0 w-7 h-7 border-2 border-black bg-amberkraft flex items-center justify-center font-mono font-black text-base leading-none group-open:hidden">+</span>
+<span aria-hidden="true" class="shrink-0 w-7 h-7 border-2 border-black bg-black text-amberkraft hidden items-center justify-center font-mono font-black text-base leading-none group-open:flex">&minus;</span>
+</summary>
+<p class="px-5 pb-5 font-sans text-sm sm:text-base text-black/80 leading-relaxed">VEKOK ada di Pasar Sabtuan, Jl. Basuki Rahmat, Tegal Besar Wetan, Kabupaten Jember, Jawa Timur. Titik koordinatnya -8.1924387, 113.7010965. Tombol rute di halaman ini langsung membuka navigasi Google Maps.</p>
+</details>
+<details class="reveal-on-scroll group border-[3px] border-black bg-white shadow-[6px_6px_0px_#000] open:shadow-[6px_6px_0px_#D49B45]">
+<summary class="flex items-center justify-between gap-4 cursor-pointer list-none p-5 font-display font-black text-lg sm:text-xl tracking-tight">
+<span>Berapa harga menunya?</span>
+<span aria-hidden="true" class="shrink-0 w-7 h-7 border-2 border-black bg-amberkraft flex items-center justify-center font-mono font-black text-base leading-none group-open:hidden">+</span>
+<span aria-hidden="true" class="shrink-0 w-7 h-7 border-2 border-black bg-black text-amberkraft hidden items-center justify-center font-mono font-black text-base leading-none group-open:flex">&minus;</span>
+</summary>
+<p class="px-5 pb-5 font-sans text-sm sm:text-base text-black/80 leading-relaxed">Semua menu flat Rp5.000 -- kopi klotok, kopi tubruk, kopi susu, kopi jahe, kopi drip, kopi aren, kopi telor, aneka teh, air mineral, semua godogan dan snack, sampai isi ulang tumbler.</p>
+</details>
+<details class="reveal-on-scroll group border-[3px] border-black bg-white shadow-[6px_6px_0px_#000] open:shadow-[6px_6px_0px_#D49B45]">
+<summary class="flex items-center justify-between gap-4 cursor-pointer list-none p-5 font-display font-black text-lg sm:text-xl tracking-tight">
+<span>Bisa isi ulang tumbler sendiri?</span>
+<span aria-hidden="true" class="shrink-0 w-7 h-7 border-2 border-black bg-amberkraft flex items-center justify-center font-mono font-black text-base leading-none group-open:hidden">+</span>
+<span aria-hidden="true" class="shrink-0 w-7 h-7 border-2 border-black bg-black text-amberkraft hidden items-center justify-center font-mono font-black text-base leading-none group-open:flex">&minus;</span>
+</summary>
+<p class="px-5 pb-5 font-sans text-sm sm:text-base text-black/80 leading-relaxed">Bisa. Bawa tumbler atau botolmu sendiri, isi ulang tetap Rp5.000 per cup untuk semua pilihan beans: robusta Dampit / Argopuro, arabika Ijen / Raung, atau liberica biji nangka.</p>
+</details>
+<details class="reveal-on-scroll group border-[3px] border-black bg-white shadow-[6px_6px_0px_#000] open:shadow-[6px_6px_0px_#D49B45]">
+<summary class="flex items-center justify-between gap-4 cursor-pointer list-none p-5 font-display font-black text-lg sm:text-xl tracking-tight">
+<span>Kopi apa saja yang tersedia?</span>
+<span aria-hidden="true" class="shrink-0 w-7 h-7 border-2 border-black bg-amberkraft flex items-center justify-center font-mono font-black text-base leading-none group-open:hidden">+</span>
+<span aria-hidden="true" class="shrink-0 w-7 h-7 border-2 border-black bg-black text-amberkraft hidden items-center justify-center font-mono font-black text-base leading-none group-open:flex">&minus;</span>
+</summary>
+<p class="px-5 pb-5 font-sans text-sm sm:text-base text-black/80 leading-relaxed">Ada kopi klotok rebusan khas warkop, kopi tubruk, kopi susu, kopi jahe, kopi drip, kopi aren, dan kopi telor. Pilihan beans: robusta Dampit / Argopuro (bold), arabika Ijen / Raung (aromatik), liberica biji nangka (langka).</p>
+</details>
+<details class="reveal-on-scroll group border-[3px] border-black bg-white shadow-[6px_6px_0px_#000] open:shadow-[6px_6px_0px_#D49B45]">
+<summary class="flex items-center justify-between gap-4 cursor-pointer list-none p-5 font-display font-black text-lg sm:text-xl tracking-tight">
+<span>Bisa pesan dulu sebelum datang?</span>
+<span aria-hidden="true" class="shrink-0 w-7 h-7 border-2 border-black bg-amberkraft flex items-center justify-center font-mono font-black text-base leading-none group-open:hidden">+</span>
+<span aria-hidden="true" class="shrink-0 w-7 h-7 border-2 border-black bg-black text-amberkraft hidden items-center justify-center font-mono font-black text-base leading-none group-open:flex">&minus;</span>
+</summary>
+<p class="px-5 pb-5 font-sans text-sm sm:text-base text-black/80 leading-relaxed">Bisa. Susun pesananmu dari daftar menu di halaman ini lalu kirim lewat WhatsApp ke CakNdut. Pesanan disiapkan lebih dulu supaya kamu tinggal ambil begitu sampai di Pasar Sabtuan.</p>
+</details>
+<details class="reveal-on-scroll group border-[3px] border-black bg-white shadow-[6px_6px_0px_#000] open:shadow-[6px_6px_0px_#D49B45]">
+<summary class="flex items-center justify-between gap-4 cursor-pointer list-none p-5 font-display font-black text-lg sm:text-xl tracking-tight">
+<span>Ada tempat parkir dan area nongkrong?</span>
+<span aria-hidden="true" class="shrink-0 w-7 h-7 border-2 border-black bg-amberkraft flex items-center justify-center font-mono font-black text-base leading-none group-open:hidden">+</span>
+<span aria-hidden="true" class="shrink-0 w-7 h-7 border-2 border-black bg-black text-amberkraft hidden items-center justify-center font-mono font-black text-base leading-none group-open:flex">&minus;</span>
+</summary>
+<p class="px-5 pb-5 font-sans text-sm sm:text-base text-black/80 leading-relaxed">Ada. Parkir motor dan Vespa luas di tepi pasar, plus area lesehan dan kursi kayu buat nongkrong. VEKOK juga ramah komunitas vespa dan roda dua.</p>
+</details>
+<details class="reveal-on-scroll group border-[3px] border-black bg-white shadow-[6px_6px_0px_#000] open:shadow-[6px_6px_0px_#D49B45]">
+<summary class="flex items-center justify-between gap-4 cursor-pointer list-none p-5 font-display font-black text-lg sm:text-xl tracking-tight">
+<span>Cocok buat sarapan pagi?</span>
+<span aria-hidden="true" class="shrink-0 w-7 h-7 border-2 border-black bg-amberkraft flex items-center justify-center font-mono font-black text-base leading-none group-open:hidden">+</span>
+<span aria-hidden="true" class="shrink-0 w-7 h-7 border-2 border-black bg-black text-amberkraft hidden items-center justify-center font-mono font-black text-base leading-none group-open:flex">&minus;</span>
+</summary>
+<p class="px-5 pb-5 font-sans text-sm sm:text-base text-black/80 leading-relaxed">Cocok. Godogan pisang, telo, pohong, tales, roti bakar, tahu saus tiram, dan mie telur godog siap nemenin sarapan di sesi pagi 06.00-12.00 WIB.</p>
+</details>
+</div>
+<div class="mt-12 border-[3px] border-black bg-white p-6 text-center shadow-[6px_6px_0px_#000] reveal-on-scroll">
+<p class="font-display font-black text-xl sm:text-2xl uppercase tracking-tight">
+          Masih ada yang mau ditanya?
+        </p>
+<p class="font-mono text-xs sm:text-sm text-black/70 mt-2">
+          Langsung chat CakNdut, dijawab dari warkop.
+        </p>
+<a class="mt-4 inline-flex brutal-btn bg-black text-white font-mono text-xs font-black uppercase tracking-wider px-5 py-3 border-2 border-black shadow-[4px_4px_0px_#D49B45] hover:bg-amberkraft hover:text-black items-center gap-2" href="https://wa.me/6282132341102" rel="noopener noreferrer" target="_blank">
+<span>CHAT CAKNDUT</span>
+</a>
 </div>
 </div>
 </section>
@@ -856,9 +984,13 @@
 <a class="hover:text-amberkraft transition-colors" href="#menu">Daftar Ma'min</a>
 <a class="hover:text-amberkraft transition-colors" href="#tumbler">Isi Ulang Tumbler</a>
 <a class="hover:text-amberkraft transition-colors" href="#lokasi">Lokasi</a>
+<a class="hover:text-amberkraft transition-colors" href="#faq">FAQ</a>
 </div>
 <!-- Social & Contact Buttons (Clean SVGs) -->
 <div class="flex items-center gap-3">
+<a aria-label="Buka rute ke VEKOK di Google Maps" class="w-10 h-10 border-2 border-white flex items-center justify-center font-mono font-bold hover:bg-amberkraft hover:text-black hover:border-black transition-colors" data-vekok-route href="#" rel="noopener noreferrer" target="_blank" title="Rute Google Maps">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+</a>
 <a aria-label="Instagram VEKOK (@vekokcakndut)" class="w-10 h-10 border-2 border-white flex items-center justify-center font-mono font-bold hover:bg-amberkraft hover:text-black hover:border-black transition-colors" href="https://www.instagram.com/vekokcakndut" rel="noopener noreferrer" target="_blank" title="Instagram">
 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
 <rect height="20" rx="5" stroke-width="2" width="20" x="2" y="2"></rect>
@@ -876,6 +1008,9 @@
 <path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
 </svg>
 </a>
+<button aria-label="Bagikan VEKOK" class="w-10 h-10 border-2 border-white flex items-center justify-center font-mono font-bold hover:bg-amberkraft hover:text-black hover:border-black transition-colors" data-vekok-share type="button" title="Bagikan">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M8.684 13.342A3 3 0 1010 12a3 3 0 00-1.316 1.342m0 0l5.632 3.316m0 0A3 3 0 1120 18a3 3 0 01-5.684-1.342m0 0l-5.632-3.316M10 12a3 3 0 11-1.316-1.342" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+</button>
 </div>
 </div>
 <!-- Bottom Credits & Trademark -->
@@ -975,6 +1110,319 @@
   </script>
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"CafeOrCoffeeShop","name":"VEKOK (Vespa Klotok CakNdut)","alternateName":"Vespa Klotok - Kopi CakNdut (VEKOK)","description":"Warkop Vespa Klotok Sabtuan racikan CakNdut. Kopi tubruk, robusta, arabica, liberica, isi ulang tumbler serba Rp5.000.","image":"https://vekok.tiyoouw.app/assets/og-image.png","url":"https://vekok.tiyoouw.app/","telephone":"+6282132341102","hasMap":"https://maps.app.goo.gl/u8kqErAmz45PEDtc9","geo":{"@type":"GeoCoordinates","latitude":-8.1924387,"longitude":113.7010965},"servesCuisine":["Kopi","Teh","Camilan Tradisional"],"priceRange":"Rp5.000","currenciesAccepted":"IDR","address":{"@type":"PostalAddress","streetAddress":"Jl. Basuki Rahmat, Pasar Sabtuan, Tegal Besar Wetan","addressLocality":"Tegal Besar","addressRegion":"Kabupaten Jember, Jawa Timur","postalCode":"68131","addressCountry":"ID"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"06:00","closes":"12:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"16:00","closes":"20:00"}],"hasMenu":{"@type":"Menu","name":"Daftar Ma'min Vekok","hasMenuSection":[{"@type":"MenuSection","name":"Kopi"},{"@type":"MenuSection","name":"Teh"},{"@type":"MenuSection","name":"Godogan & Snack"}]}}
+{"@context":"https://schema.org","@type":"CafeOrCoffeeShop","name":"VEKOK (Vespa Klotok CakNdut)","alternateName":"Vespa Klotok - Kopi CakNdut (VEKOK)","description":"Warkop Vespa Klotok Sabtuan racikan CakNdut. Kopi tubruk, robusta, arabica, liberica, isi ulang tumbler serba Rp5.000.","image":["https://vekok.tiyoouw.app/assets/og-image.png","https://vekok.tiyoouw.app/assets/icon-512.png"],"url":"https://vekok.tiyoouw.app/","telephone":"+6282132341102","hasMap":"https://maps.app.goo.gl/u8kqErAmz45PEDtc9","geo":{"@type":"GeoCoordinates","latitude":-8.1924387,"longitude":113.7010965},"servesCuisine":["Kopi","Teh","Camilan Tradisional"],"priceRange":"Rp5.000","currenciesAccepted":"IDR","address":{"@type":"PostalAddress","streetAddress":"Jl. Basuki Rahmat, Pasar Sabtuan, Tegal Besar Wetan","addressLocality":"Tegal Besar","addressRegion":"Kabupaten Jember, Jawa Timur","postalCode":"68131","addressCountry":"ID"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"06:00","closes":"12:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"16:00","closes":"20:00"}],"hasMenu":{"@type":"Menu","name":"Daftar Ma'min VEKOK","description":"Semua menu VEKOK flat Rp5.000, termasuk isi ulang tumbler.","url":"https://vekok.tiyoouw.app/#menu","hasMenuSection":[{"@type":"MenuSection","name":"Kopi","hasMenuItem":[{"@type":"MenuItem","name":"Kopi Klotok","description":"Rebusan bubuk kopi langsung khas warkop klotok CakNdut","offers":{"@type":"Offer","price":"5000","priceCurrency":"IDR"}},{"@type":"MenuItem","name":"Kopi Tubruk","description":"Kental, pekat, aroma khas seduhan pasar","offers":{"@type":"Offer","price":"5000","priceCurrency":"IDR"}},{"@type":"MenuItem","name":"Kopi Susu","description":"Kopi robusta kental berpadu manisnya krimer kental manis","offers":{"@type":"Offer","price":"5000","priceCurrency":"IDR"}},{"@type":"MenuItem","name":"Kopi Jahe","description":"Geprekan jahe asli bakar, hangatkan badan","offers":{"@type":"Offer","price":"5000","priceCurrency":"IDR"}},{"@type":"MenuItem","name":"Kopi Drip","description":"Seduhan drip manual, bersih dan ringan","offers":{"@type":"Offer","price":"5000","priceCurrency":"IDR"}},{"@type":"MenuItem","name":"Kopi Aren","description":"Manis legit gula aren murni","offers":{"@type":"Offer","price":"5000","priceCurrency":"IDR"}},{"@type":"MenuItem","name":"Kopi Telor","description":"Racikan klasik kopi telor khas warkop","offers":{"@type":"Offer","price":"5000","priceCurrency":"IDR"}}]},{"@type":"MenuSection","name":"Teh & Lainnya","hasMenuItem":[{"@type":"MenuItem","name":"Teh Tubruk","description":"Racikan daun teh wangi nasgitel","offers":{"@type":"Offer","price":"5000","priceCurrency":"IDR"}},{"@type":"MenuItem","name":"Teh Jeruk Nipis","description":"Perasan jeruk nipis segar pelepas dahaga","offers":{"@type":"Offer","price":"5000","priceCurrency":"IDR"}},{"@type":"MenuItem","name":"Teh Tawar","description":"Seduhan murni daun teh tanpa gula","offers":{"@type":"Offer","price":"5000","priceCurrency":"IDR"}},{"@type":"MenuItem","name":"Teh Manis","description":"Manis pas gula asli warkop Sabtuan","offers":{"@type":"Offer","price":"5000","priceCurrency":"IDR"}},{"@type":"MenuItem","name":"Teh Jahe","description":"Rasa pedas hangat jahe asli","offers":{"@type":"Offer","price":"5000","priceCurrency":"IDR"}},{"@type":"MenuItem","name":"Jeruk Jahe","description":"Perpaduan asam jeruk dan hangat jahe","offers":{"@type":"Offer","price":"5000","priceCurrency":"IDR"}},{"@type":"MenuItem","name":"Air Mineral","description":"Kemasan botol dingin / biasa","offers":{"@type":"Offer","price":"5000","priceCurrency":"IDR"}}]},{"@type":"MenuSection","name":"Godogan & Snack","hasMenuItem":[{"@type":"MenuItem","name":"Pisang Plenyet","description":"Pisang kepok dipipihkan, dibakar legit gurih","offers":{"@type":"Offer","price":"5000","priceCurrency":"IDR"}},{"@type":"MenuItem","name":"Pisang Godog","description":"Pisang direbus hangat, camilan pasar klasik","offers":{"@type":"Offer","price":"5000","priceCurrency":"IDR"}},{"@type":"MenuItem","name":"Telo Godog","description":"Ubi jalar rebus, manis alami","offers":{"@type":"Offer","price":"5000","priceCurrency":"IDR"}},{"@type":"MenuItem","name":"Pohong Godog","description":"Singkong rebus, kenyang dan murah","offers":{"@type":"Offer","price":"5000","priceCurrency":"IDR"}},{"@type":"MenuItem","name":"Tales Godog","description":"Talas rebus lembut, gurih tradisional","offers":{"@type":"Offer","price":"5000","priceCurrency":"IDR"}},{"@type":"MenuItem","name":"Roti Bakar","description":"Roti bakar panas, wangi dan renyah","offers":{"@type":"Offer","price":"5000","priceCurrency":"IDR"}},{"@type":"MenuItem","name":"Tahu Saus Tiram","description":"Tahu goreng siram saus tiram gurih pedas","offers":{"@type":"Offer","price":"5000","priceCurrency":"IDR"}},{"@type":"MenuItem","name":"Mie Telur Godog","description":"Mie telur rebus, porsi kenyang mantap","offers":{"@type":"Offer","price":"5000","priceCurrency":"IDR"}}]},{"@type":"MenuSection","name":"Isi Ulang Tumbler","hasMenuItem":[{"@type":"MenuItem","name":"Refill Robusta","description":"Beans asli Dampit / Argopuro, body tebal dan pahit mantap","offers":{"@type":"Offer","price":"5000","priceCurrency":"IDR"}},{"@type":"MenuItem","name":"Refill Arabica","description":"Dataran tinggi Ijen / Raung, cerah dengan sentuhan citrus","offers":{"@type":"Offer","price":"5000","priceCurrency":"IDR"}},{"@type":"MenuItem","name":"Refill Liberica","description":"Biji nangka Jawa Timur, aroma smoky woody khas","offers":{"@type":"Offer","price":"5000","priceCurrency":"IDR"}}]}]},"@id":"https://vekok.tiyoouw.app/#cafe","logo":"https://vekok.tiyoouw.app/assets/icon-512.png","sameAs":["https://www.instagram.com/vekokcakndut","https://maps.app.goo.gl/u8kqErAmz45PEDtc9","https://wa.me/6282132341102"],"slogan":"Seduhan jujur pinggir pasar, serba 5.000.","knowsLanguage":["id"],"isAccessibleForFree":true,"publicAccess":true,"areaServed":{"@type":"City","name":"Jember"},"additionalProperty":[{"@type":"PropertyValue","name":"Isi ulang tumbler","value":"Rp5.000 / cup"},{"@type":"PropertyValue","name":"Sesi buka","value":"06.00-12.00 & 16.00-20.00 WIB"}]}
+</script>
+<script>
+/* ------------------------------------------------------------------
+   VEKOK front-end behaviours. Everything here is an upgrade: the HTML
+   already carries a usable static default when JS is off.
+   ------------------------------------------------------------------ */
+(function () {
+  'use strict';
+
+  var WA_NUM = '6282132341102';
+  var LAT = '-8.1924387', LNG = '113.7010965';
+  var SLOTS = [[360,720],[960,1200]];
+  var UNIT = 5000;
+  var STORE = 'vekok.cart.v1';
+
+  /* ================= 1. live BUKA / TUTUP badge ================= */
+  function wibNow() {
+    var d = new Date();
+    /* Indonesia has no DST; force UTC+7 from the absolute instant. */
+    return new Date(d.getTime() + d.getTimezoneOffset() * 60000 + 7 * 3600000);
+  }
+  function minsOf(d) { return d.getHours() * 60 + d.getMinutes(); }
+  function hhmm(m) {
+    var h = Math.floor(m / 60) % 24, mm = m % 60;
+    return (h < 10 ? '0' : '') + h + '.' + (mm < 10 ? '0' : '') + mm;
+  }
+  function span(m) {
+    if (m < 60) return m + ' MENIT';
+    var h = Math.floor(m / 60), r = m % 60;
+    return h + ' JAM' + (r ? ' ' + r + ' MENIT' : '');
+  }
+  function status() {
+    var t = minsOf(wibNow()), i;
+    for (i = 0; i < SLOTS.length; i++) {
+      if (t >= SLOTS[i][0] && t < SLOTS[i][1]) return { open: true, until: SLOTS[i][1] };
+    }
+    for (i = 0; i < SLOTS.length; i++) {
+      if (t < SLOTS[i][0]) return { open: false, at: SLOTS[i][0], today: true, wait: SLOTS[i][0] - t };
+    }
+    return { open: false, at: SLOTS[0][0], today: false };
+  }
+  function renderStatus() {
+    var s = status();
+    var full = s.open
+      ? 'BUKA SEKARANG \u00b7 TUTUP ' + hhmm(s.until) + ' WIB'
+      : (s.today
+          ? 'TUTUP \u00b7 BUKA ' + hhmm(s.at) + ' WIB (' + span(s.wait) + ' LAGI)'
+          : 'TUTUP \u00b7 BUKA BESOK ' + hhmm(s.at) + ' WIB');
+    var short = s.open ? 'BUKA SEKARANG' : 'SEDANG TUTUP';
+    document.querySelectorAll('[data-vekok-status]').forEach(function (el) {
+      el.setAttribute('data-state', s.open ? 'open' : 'closed');
+      el.setAttribute('title', full);
+      var out = el.querySelector('[data-vekok-status-text]');
+      if (out) out.textContent = (el.getAttribute('data-vekok-status') === 'short') ? short : full;
+    });
+    var hero = document.getElementById('vekok-hero-status');
+    if (hero) hero.textContent = full;
+  }
+  renderStatus();
+  setInterval(renderStatus, 30000);
+
+  /* ================= 2. pre-order cart ================= */
+  var cart = {};
+  try { cart = JSON.parse(localStorage.getItem(STORE) || '{}') || {}; } catch (e) { cart = {}; }
+
+  function persist() {
+    try { localStorage.setItem(STORE, JSON.stringify(cart)); } catch (e) { /* private mode */ }
+  }
+  function lines() {
+    return Object.keys(cart).filter(function (k) { return cart[k] > 0; });
+  }
+  function count() {
+    return lines().reduce(function (n, k) { return n + cart[k]; }, 0);
+  }
+  function rupiah(n) {
+    return 'Rp' + String(n).replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+  }
+
+  /* --- collect every orderable row, keyed by its visible name --- */
+  function collect() {
+    var found = [], seen = {};
+    function push(name, host, priceEl) {
+      name = (name || '').replace(/\s+/g, ' ').trim();
+      if (!name || !host || seen[name]) return;
+      seen[name] = 1;
+      found.push({ name: name, host: host, priceEl: priceEl });
+    }
+    function directSpan(el) {
+      for (var i = 0; i < el.children.length; i++) {
+        if (el.children[i].tagName === 'SPAN') return el.children[i];
+      }
+      return null;
+    }
+    /* a) full-width list rows inside #menu */
+    document.querySelectorAll('#menu div.group.flex.items-center.justify-between').forEach(function (row) {
+      var nameEl = row.querySelector('.font-display.font-extrabold');
+      if (!nameEl) return;
+      push(nameEl.textContent, row, directSpan(row));
+    });
+    /* b) the 8 godogan / snack mini cards */
+    document.querySelectorAll('#menu [data-vekok-card="snack"]').forEach(function (card) {
+      var nameEl = card.querySelector('h4.font-display, h3.font-display');
+      var bar = card.lastElementChild;
+      if (!nameEl || !bar) return;
+      push(nameEl.textContent, bar, bar.querySelector('span.bg-black'));
+    });
+    /* c) the 3 tumbler refill cards */
+    document.querySelectorAll('#tumbler .reveal-on-scroll').forEach(function (card) {
+      var nameEl = card.querySelector('h3.font-display');
+      var bar = card.lastElementChild;
+      if (!nameEl || !bar || !bar.textContent.match(/5\.000/)) return;
+      push('Refill ' + nameEl.textContent, bar, bar.querySelector('span.font-display'));
+    });
+    return found;
+  }
+
+  /* --- inject an add button next to each price --- */
+  function paintButton(btn, name) {
+    var q = cart[name] || 0;
+    btn.textContent = q > 0 ? String(q) : '+';
+    btn.classList.toggle('is-on', q > 0);
+    btn.setAttribute('aria-label',
+      q > 0 ? name + ': ' + q + ' di pesanan, klik untuk tambah'
+            : 'Tambah ' + name + ' ke pesanan');
+  }
+
+  function wire() {
+    collect().forEach(function (item) {
+      if (!item.priceEl || item.priceEl.parentNode.classList.contains('vekok-bundle')) return;
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'vekok-add';
+      btn.setAttribute('data-vekok-add', item.name);
+      paintButton(btn, item.name);
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        cart[item.name] = (cart[item.name] || 0) + 1;
+        persist();
+        sync();
+        toast('+1 ' + item.name);
+      });
+      var bundle = document.createElement('span');
+      bundle.className = 'vekok-bundle';
+      item.priceEl.parentNode.insertBefore(bundle, item.priceEl);
+      bundle.appendChild(item.priceEl);
+      bundle.appendChild(btn);
+    });
+  }
+
+  /* --- the sticky cart bar --- */
+  var bar = document.createElement('div');
+  bar.id = 'vekok-cart';
+  bar.setAttribute('data-open', '0');
+  bar.setAttribute('role', 'region');
+  bar.setAttribute('aria-label', 'Pesanan saya');
+  bar.innerHTML =
+    '<div class="vekok-cart-inner">' +
+      '<div class="vekok-cart-summary">' +
+        '<span class="vekok-cart-count" data-vekok-count>0 ITEM</span>' +
+        '<span class="vekok-cart-total" data-vekok-total>Rp0</span>' +
+      '</div>' +
+      '<div class="vekok-cart-actions">' +
+        '<button type="button" class="vekok-cart-list" data-vekok-toggle aria-expanded="false">RINCI</button>' +
+        '<a class="vekok-cart-wa" data-vekok-wa target="_blank" rel="noopener">PESAN VIA WA</a>' +
+        '<button type="button" class="vekok-cart-clear" data-vekok-clear>KOSONGKAN</button>' +
+        '<button type="button" class="vekok-cart-close" data-vekok-close aria-label="Sembunyikan pesanan">TUTUP</button>' +
+      '</div>' +
+    '</div>' +
+    '<ul id="vekok-cart-items" hidden></ul>';
+  document.body.appendChild(bar);
+
+  var list = bar.querySelector('#vekok-cart-items');
+  var toastEl = document.createElement('div');
+  toastEl.id = 'vekok-toast';
+  toastEl.setAttribute('role', 'status');
+  toastEl.setAttribute('aria-live', 'polite');
+  document.body.appendChild(toastEl);
+
+  var toastTimer = null;
+  function toast(msg) {
+    toastEl.textContent = msg;
+    toastEl.setAttribute('data-show', '1');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () { toastEl.setAttribute('data-show', '0'); }, 2200);
+  }
+
+  function waMessage() {
+    var picked = lines();
+    var body = 'Halo CakNdut! Saya mau pesan di VEKOK Sabtuan:\n\n';
+    picked.forEach(function (k) { body += '- ' + cart[k] + 'x ' + k + '\n'; });
+    body += '\nTotal: ' + count() + ' item | ' + rupiah(count() * UNIT) + '\n';
+    body += 'Nama saya: \n';
+    body += 'Saya ambil di Pasar Sabtuan, terima kasih!';
+    return 'https://wa.me/' + WA_NUM + '?text=' + encodeURIComponent(body);
+  }
+
+  function renderList() {
+    list.innerHTML = '';
+    lines().forEach(function (k) {
+      var li = document.createElement('li');
+      var label = document.createElement('span');
+      label.textContent = k;
+      var qty = document.createElement('span');
+      qty.className = 'vekok-qty';
+      var minus = document.createElement('button');
+      minus.type = 'button';
+      minus.textContent = '\u2212';
+      minus.setAttribute('aria-label', 'Kurangi ' + k);
+      var n = document.createElement('b');
+      n.textContent = cart[k];
+      var plus = document.createElement('button');
+      plus.type = 'button';
+      plus.textContent = '+';
+      plus.setAttribute('aria-label', 'Tambah ' + k);
+      minus.addEventListener('click', function () { bump(k, -1); });
+      plus.addEventListener('click', function () { bump(k, 1); });
+      qty.appendChild(minus);
+      qty.appendChild(n);
+      qty.appendChild(plus);
+      var price = document.createElement('span');
+      price.textContent = rupiah(cart[k] * UNIT);
+      li.appendChild(label);
+      li.appendChild(qty);
+      li.appendChild(price);
+      list.appendChild(li);
+    });
+  }
+
+  function sync() {
+    var n = count();
+    var open = n > 0 && bar.getAttribute('data-closed') !== '1';
+    bar.setAttribute('data-open', open ? '1' : '0');
+    document.body.classList.toggle('vekok-cart-open', open);
+    bar.querySelector('[data-vekok-count]').textContent = n + ' ITEM';
+    bar.querySelector('[data-vekok-total]').textContent = rupiah(n * UNIT);
+    var wa = bar.querySelector('[data-vekok-wa]');
+    wa.href = waMessage();
+    wa.setAttribute('aria-disabled', n ? 'false' : 'true');
+    if (!n) {
+      bar.setAttribute('data-closed', '0');
+      list.hidden = true;
+      bar.querySelector('[data-vekok-toggle]').setAttribute('aria-expanded', 'false');
+    }
+    renderList();
+    document.querySelectorAll('[data-vekok-add]').forEach(function (b) {
+      paintButton(b, b.getAttribute('data-vekok-add'));
+    });
+  }
+
+  function bump(name, delta) {
+    cart[name] = Math.max(0, (cart[name] || 0) + delta);
+    if (!cart[name]) delete cart[name];
+    persist();
+    sync();
+  }
+
+  bar.querySelector('[data-vekok-toggle]').addEventListener('click', function () {
+    var btn = this;
+    var showing = list.hidden;
+    list.hidden = !showing;
+    btn.setAttribute('aria-expanded', showing ? 'true' : 'false');
+  });
+  bar.querySelector('[data-vekok-clear]').addEventListener('click', function () {
+    cart = {};
+    persist();
+    sync();
+    toast('Pesanan dikosongkan');
+  });
+  bar.querySelector('[data-vekok-close]').addEventListener('click', function () {
+    bar.setAttribute('data-closed', '1');
+    bar.setAttribute('data-open', '0');
+    document.body.classList.remove('vekok-cart-open');
+  });
+  bar.querySelector('[data-vekok-wa]').addEventListener('click', function (e) {
+    if (!count()) { e.preventDefault(); toast('Pesanan masih kosong'); }
+  });
+
+  /* ================= 3. route + share ================= */
+  var route = 'https://www.google.com/maps/dir/?api=1&destination=' + LAT + ',' + LNG + '&travelmode=driving';
+  document.querySelectorAll('[data-vekok-route]').forEach(function (a) { a.href = route; });
+
+  var shareUrl = 'https://vekok.tiyoouw.app/';
+  var shareText = 'VEKOK \u2014 warkop Vespa Klotok CakNdut, Pasar Sabtuan Jember. Kopi klotok, godogan, isi ulang tumbler serba Rp5.000.';
+  document.querySelectorAll('[data-vekok-share]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      if (navigator.share) {
+        navigator.share({ title: 'VEKOK Sabtuan', text: shareText, url: shareUrl }).catch(function () {});
+        return;
+      }
+      var done = function () { toast('Link VEKOK disalin'); };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(shareUrl).then(done, function () { window.prompt('Salin link VEKOK:', shareUrl); });
+      } else {
+        window.prompt('Salin link VEKOK:', shareUrl);
+      }
+    });
+  });
+
+  /* ================= 4. boot ================= */
+  wire();
+  sync();
+
+  /* Service worker: offline shell + instant repeat loads. */
+  if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) {
+    window.addEventListener('load', function () {
+      navigator.serviceWorker.register('/sw.js').catch(function () {});
+    });
+  }
+})();
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Vekok buka jam berapa?","acceptedAnswer":{"@type":"Answer","text":"VEKOK buka setiap hari tanpa libur dalam dua sesi: pagi 06.00-12.00 WIB dan sore 16.00-20.00 WIB. Sesi pagi cocok buat sarapan dan booster, sesi sore buat cangkruk santai."}},{"@type":"Question","name":"Di mana lokasi Vekok?","acceptedAnswer":{"@type":"Answer","text":"VEKOK ada di Pasar Sabtuan, Jl. Basuki Rahmat, Tegal Besar Wetan, Kabupaten Jember, Jawa Timur. Titik koordinatnya -8.1924387, 113.7010965. Tombol rute di halaman ini langsung membuka navigasi Google Maps."}},{"@type":"Question","name":"Berapa harga menunya?","acceptedAnswer":{"@type":"Answer","text":"Semua menu flat Rp5.000 -- kopi klotok, kopi tubruk, kopi susu, kopi jahe, kopi drip, kopi aren, kopi telor, aneka teh, air mineral, semua godogan dan snack, sampai isi ulang tumbler."}},{"@type":"Question","name":"Bisa isi ulang tumbler sendiri?","acceptedAnswer":{"@type":"Answer","text":"Bisa. Bawa tumbler atau botolmu sendiri, isi ulang tetap Rp5.000 per cup untuk semua pilihan beans: robusta Dampit / Argopuro, arabika Ijen / Raung, atau liberica biji nangka."}},{"@type":"Question","name":"Kopi apa saja yang tersedia?","acceptedAnswer":{"@type":"Answer","text":"Ada kopi klotok rebusan khas warkop, kopi tubruk, kopi susu, kopi jahe, kopi drip, kopi aren, dan kopi telor. Pilihan beans: robusta Dampit / Argopuro (bold), arabika Ijen / Raung (aromatik), liberica biji nangka (langka)."}},{"@type":"Question","name":"Bisa pesan dulu sebelum datang?","acceptedAnswer":{"@type":"Answer","text":"Bisa. Susun pesananmu dari daftar menu di halaman ini lalu kirim lewat WhatsApp ke CakNdut. Pesanan disiapkan lebih dulu supaya kamu tinggal ambil begitu sampai di Pasar Sabtuan."}},{"@type":"Question","name":"Ada tempat parkir dan area nongkrong?","acceptedAnswer":{"@type":"Answer","text":"Ada. Parkir motor dan Vespa luas di tepi pasar, plus area lesehan dan kursi kayu buat nongkrong. VEKOK juga ramah komunitas vespa dan roda dua."}},{"@type":"Question","name":"Cocok buat sarapan pagi?","acceptedAnswer":{"@type":"Answer","text":"Cocok. Godogan pisang, telo, pohong, tales, roti bakar, tahu saus tiram, dan mie telur godog siap nemenin sarapan di sesi pagi 06.00-12.00 WIB."}}]}
 </script>
 </body></html>
