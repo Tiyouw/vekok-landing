@@ -1,7 +1,7 @@
 /* VEKOK service worker -- offline shell for the warkop landing page.
    Navigation + CSS are network-first so a redeploy is never served stale;
    /assets/ is cache-first because vercel.json marks it immutable. */
-const CACHE = 'vekok-2026-09-18';
+const CACHE = 'vekok-2026-09-22';
 const SHELL = ['/', '/assets/logo.png', '/assets/fonts/syne-latin.woff2'];
 
 self.addEventListener('install', () => self.skipWaiting());

@@ -222,6 +222,17 @@
   gap: 0.6rem;
 }
 .vekok-cart-count { color: #D49B45; letter-spacing: 0.06em; text-transform: uppercase; }
+.vekok-cart-pay {
+  font-family: 'Space Grotesk', monospace;
+  font-weight: 900;
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: #F6E6CC;
+  color: #000;
+  padding: 0.2rem 0.45rem;
+  border: 2px solid #000;
+}
 .vekok-cart-actions { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
 .vekok-cart-actions a,
 .vekok-cart-actions button {
